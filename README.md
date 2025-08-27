@@ -21,6 +21,7 @@ pip install -r requirements.txt
 ```
 
 `.env` ファイルを作成し、以下を設定してください。
+ウェブアプリ上では使わないため、importとload_dotenv()をコメントアウトしています。
 
 ```env
 FLASK_KEY=任意のシークレットキー

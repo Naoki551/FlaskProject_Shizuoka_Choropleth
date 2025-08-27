@@ -1,6 +1,6 @@
 import os
 import io
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 from flask import Flask, render_template,url_for,Response,request
 from forms import UploadCSVForm,ValueForm
 import pandas as pd
@@ -10,7 +10,8 @@ from mpl_toolkits.axes_grid1 import make_axes_locatable
 
 
 
-load_dotenv()
+# load_dotenv()
+
 GEOJASON_PATH="data/N03-20250101_22.geojson"
 
 
