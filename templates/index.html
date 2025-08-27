@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block head %}
+    {% include "header.html"%}
+{% endblock %}
+
+{% block content %}
+    <h1>Shizuoka Choropleth Map</h1>
+    <ul>
+        <li>
+            <a class="important" href="{{ url_for('data_entry',csv='csv')}}">CSVファイルをアップロードする</a>
+        </li>
+        <li>
+            <a href="#">手入力でデータを入力する</a>
+        </li>
+    </ul>
+{% endblock %}
+
+{% block footer %}
+    {% include "footer.html" %}
+{% endblock %}

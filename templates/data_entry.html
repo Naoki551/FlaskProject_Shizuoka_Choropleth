@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block head %}
+    {% include "header.html"%}
+{% endblock %}
+
+{% block content %}
+    {% if csv %}
+        <h1>CSVファイルをアップロードする</h1>
+        <form action="{{url_for('process_file',csv=csv)}}" method="POST" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        <input type="hidden" name="csv" value="{{ csv }}">
+        <ul>
+            <li>{{form.file}}</li>
+            <li>{{form.municipalities.label}} {{form.municipalities}}</li>
+            <li>{{form.values.label}} {{form.values}}</li>
+            <li>{{form.title.label}} {{form.title}}</li>
+            <li>{{form.submit}}</li>
+        </ul>
+        </form>
+    {% else %}
+        <h2>「自治体名」の列に自治体の名称を設定してください</h2>
+    {% endif %}
+{% endblock %}
+
+{% block footer %}
+    {% include "footer.html" %}
+{% endblock %}
